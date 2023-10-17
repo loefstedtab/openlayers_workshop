@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>OpenLayers</title>
     <style>
       @import "node_modules/ol/ol.css";
@@ -25,7 +26,14 @@
   background: white;
   cursor: pointer;
 }
-
+.locate{
+  top: 6em;
+  left: .5em;
+}
+#track{
+  top: 7em;
+  left: .5em;
+}
     </style>
   </head>
   <body>
@@ -34,6 +42,15 @@
       <a id="clear">Clear</a>
       <a id="download" download="features.json">Download</a>
     </div>
+    <div id="map" class="map"></div>
+    <div id="info" style="display: none;"></div>
+    <p>
+      position accuracy : <code id="accuracy"></code>&nbsp;&nbsp;
+      altitude : <code id="altitude"></code>&nbsp;&nbsp;
+      altitude accuracy : <code id="altitudeAccuracy"></code>&nbsp;&nbsp;
+      heading : <code id="heading"></code>&nbsp;&nbsp;
+      speed : <code id="speed"></code>
+    </p>
     <script src="./main.js" type="module"></script>
   </body>
 </html>
